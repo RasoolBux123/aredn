@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+// Function to calculate the factorial of a number
+long long factorial(int n) {
+    // Base case: factorial of 0 or 1 is 1
+    if (n <= 1)
+        return 1;
+    // Recursive case
+    return n * factorial(n - 1);
+}
+
+int main() {
+    // Declare a variable to store the number
+    int number;
+    
+    // Input the number
+    cout << "Enter a number to calculate its factorial: ";
+    cin >> number;
+    
+    // Check for negative input
+    if (number < 0) {
+        cout << "Factorial is not defined for negative numbers." << endl;
+    } else {
+        // Call the factorial function and store the result
+        long long result = factorial(number);
+        
+        // Output the result
+        cout << "Factorial of " << number << " is: " << result << endl;
+    }
+
+    return 0;
+}
